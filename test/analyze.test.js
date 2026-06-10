@@ -4,7 +4,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { analyzeRepo } from '../src/model.js'
 
-const FIXTURES = join(dirname(fileURLToPath(import.meta.url)), 'fixtures')
+const FIXTURES = join(dirname(fileURLToPath(import.meta.url)), '..', 'fixtures')
 
 test('import graph — relative imports resolve to repo files, exports collected', () => {
   const m = analyzeRepo(join(FIXTURES, 'demo'))

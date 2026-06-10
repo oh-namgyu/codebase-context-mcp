@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { analyzeRepo } from '../src/model.js'
 import { toMarkdown, toMermaid, render } from '../src/render.js'
 
-const DEMO = join(dirname(fileURLToPath(import.meta.url)), 'fixtures', 'demo')
+const DEMO = join(dirname(fileURLToPath(import.meta.url)), '..', 'fixtures', 'demo')
 
 test('markdown render contains all sections and counts', () => {
   const md = toMarkdown(analyzeRepo(DEMO))

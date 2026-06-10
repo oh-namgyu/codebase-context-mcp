@@ -6,7 +6,7 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-const DEMO = join(ROOT, 'test', 'fixtures', 'demo')
+const DEMO = join(ROOT, 'fixtures', 'demo')
 
 test('MCP stdio round-trip — list tools and call all three', async (t) => {
   const client = new Client({ name: 'test-client', version: '0.0.1' })

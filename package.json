@@ -9,7 +9,7 @@
     "codebase-context-mcp": "src/mcp.js"
   },
   "scripts": {
-    "test": "node --test \"test/*.test.js\"",
+    "test": "node --test",
     "mcp": "node src/mcp.js"
   },
   "engines": {

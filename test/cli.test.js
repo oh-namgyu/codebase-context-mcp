@@ -7,7 +7,7 @@ import { promisify } from 'node:util'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const CLI = join(ROOT, 'src', 'cli.js')
-const DEMO = join(ROOT, 'test', 'fixtures', 'demo')
+const DEMO = join(ROOT, 'fixtures', 'demo')
 const run = (args) =>
   promisify(execFile)(process.execPath, [CLI, ...args]).then(
     (r) => ({ code: 0, out: r.stdout }),
