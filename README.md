@@ -1,5 +1,7 @@
 # codebase-context-mcp
 
+**[🇰🇷 한국어 README](README_KOR.md)**
+
 Static codebase analysis as MCP tools — give AI coding agents a **map of your repo** instead
 of letting them burn half their tokens rediscovering it file by file.
 
