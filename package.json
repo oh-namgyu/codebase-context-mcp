@@ -1,0 +1,39 @@
+{
+  "name": "codebase-context-mcp",
+  "version": "0.1.0",
+  "description": "Static codebase analysis as MCP tools — give AI coding agents a map of your repo (file map, import graph, API routes, frontend-to-backend edges) instead of letting them burn tokens rediscovering it.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "codebase-context": "src/cli.js",
+    "codebase-context-mcp": "src/mcp.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "mcp": "node src/mcp.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oh-namgyu/codebase-context-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "static-analysis",
+    "ai-agents",
+    "claude-code",
+    "codebase",
+    "import-graph",
+    "architecture"
+  ],
+  "dependencies": {
+    "@babel/parser": "^7.26.0",
+    "@babel/traverse": "^7.26.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "commander": "^13.0.0",
+    "zod": "^3.24.0"
+  }
+}
