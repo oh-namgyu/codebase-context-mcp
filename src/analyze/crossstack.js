@@ -43,7 +43,7 @@ export function extractCallSites(parsed) {
   return sites
 }
 
-function segmentsMatch(routePath, callPath) {
+export function segmentsMatch(routePath, callPath) {
   const stripQuery = callPath.split('?')[0]
   const rs = routePath.split('/').filter(Boolean)
   const cs = stripQuery.split('/').filter(Boolean)

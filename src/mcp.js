@@ -7,6 +7,7 @@ import { realpathSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { analyzeRepo } from './model.js'
 import { toMarkdown, toMermaid } from './render.js'
+import { segmentsMatch } from './analyze/crossstack.js'
 
 const text = (s) => ({ content: [{ type: 'text', text: s }] })
 const PATH_ARG = { path: z.string().describe('Absolute path to the repository root') }
@@ -34,10 +35,11 @@ export function buildServer() {
   server.tool(
     'find_api_callers',
     'Find frontend call sites (fetch/axios) that hit a given API route path — answers "who calls this API?". Returns matching call sites with file:line.',
-    { ...PATH_ARG, route: z.string().describe('Route path to look up, e.g. /api/items') },
+    { ...PATH_ARG, route: z.string().describe('Route path to look up — a pattern (/api/items/:id) or a concrete URL (/api/items/5); both match.') },
     async ({ path, route }) => {
       const model = analyzeRepo(resolve(path))
-      const hits = model.crossStack.filter((e) => e.to.path === route)
+      // Param-aware match: a concrete URL resolves to its declared :param route.
+      const hits = model.crossStack.filter((e) => segmentsMatch(e.to.path, route))
       return text(JSON.stringify(hits, null, 2))
     }
   )
