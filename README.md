@@ -1,5 +1,10 @@
 # codebase-context-mcp
 
+[![CI](https://github.com/oh-namgyu/codebase-context-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-namgyu/codebase-context-mcp/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/oh-namgyu/codebase-context-mcp)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/oh-namgyu/codebase-context-mcp)](https://github.com/oh-namgyu/codebase-context-mcp/releases)
+
+
 **[🇰🇷 한국어 README](README_KOR.md)**
 
 Static codebase analysis as MCP tools — give AI coding agents a **map of your repo** instead
