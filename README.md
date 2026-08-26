@@ -5,6 +5,8 @@
 [![Release](https://img.shields.io/github/v/release/oh-namgyu/codebase-context-mcp)](https://github.com/oh-namgyu/codebase-context-mcp/releases)
 
 
+> **한글 요약** — 코드베이스 정적 분석 결과(임포트 그래프·API 라우트·프런트-백엔드 연결)를 MCP 도구로 제공합니다 — AI 에이전트가 매번 토큰을 태워 repo를 재탐색하는 대신 지도를 갖고 시작하게 합니다. *(전체 한국어 문서: [README_KOR.md](README_KOR.md))*
+
 **[🇰🇷 한국어 README](README_KOR.md)**
 
 Static codebase analysis as MCP tools — give AI coding agents a **map of your repo** instead
