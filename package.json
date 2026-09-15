@@ -30,10 +30,10 @@
     "architecture"
   ],
   "dependencies": {
-    "@babel/parser": "^8.0.4",
-    "@babel/traverse": "^8.0.4",
+    "@babel/parser": "^8.0.5",
+    "@babel/traverse": "^8.0.5",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "commander": "^15.0.0",
-    "zod": "^4.5.4"
+    "zod": "^4.6.2"
   }
 }
