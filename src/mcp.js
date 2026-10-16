@@ -13,7 +13,7 @@ const text = (s) => ({ content: [{ type: 'text', text: s }] })
 const PATH_ARG = { path: z.string().describe('Absolute path to the repository root') }
 
 export function buildServer() {
-  const server = new McpServer({ name: 'codebase-context-mcp', version: '0.1.1' })
+  const server = new McpServer({ name: 'codebase-context-mcp', version: '0.2.0' })
 
   server.tool(
     'analyze_repo',

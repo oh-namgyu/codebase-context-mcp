@@ -2,6 +2,11 @@
 
 All notable changes are documented here. Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](https://semver.org/).
 
+## [v0.2.0] - 2026-10-16
+### Changed
+- **Node.js 22 is now the minimum** (`engines.node` is `^22.18.0 || >=24.11.0`). The previous `>=20` was already untrue: `@babel/*` 8 requires `^22.18.0 || >=24.11.0` and `commander` 15 requires `>=22.12.0`, so `npm install` on Node 20 printed `EBADENGINE` warnings. Node 20 reached end-of-life in April 2026.
+- CI tests on Node 22 and 24 (Node 20 dropped).
+
 ## [v0.1.1] - 2026-10-16
 ### Changed
 - Runtime dependencies upgraded: `@babel/parser` and `@babel/traverse` 7.29.7 → 8.0.7, `commander` 13.1.0 → 15.0.0, `zod` 3.25.76 → 4.6.6, `@modelcontextprotocol/sdk` 1.29.0 → 1.32.1. No source changes were needed; the test suite passes unchanged.
