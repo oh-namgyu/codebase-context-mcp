@@ -1,6 +1,6 @@
 {
   "name": "codebase-context-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Static codebase analysis as MCP tools — give AI coding agents a map of your repo (file map, import graph, API routes, frontend-to-backend edges) instead of letting them burn tokens rediscovering it.",
   "type": "module",
   "license": "MIT",
